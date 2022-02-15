@@ -74,21 +74,19 @@ function createMap(earthquakes) {
   let streetstylemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 15,
-    id: "outdoors-v11",
     accessToken: API_KEY
   });
 
   let graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 15,
-    id: "light-v10",
     accessToken: API_KEY
   });
 
   // Define a baseMaps object to hold our base layers
   let baseMaps = {
-    "Outdoors Map": streetstylemap,
-    "Light Map": graymap
+    "Street Map": streetstylemap,
+    "Gray Map": graymap
   };
 
   // Create overlay object to hold our overlay layer
